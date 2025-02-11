@@ -1,0 +1,1 @@
+Well, a lot of it depends on what direction the learner wants to go. If they're keen on web development, I'd suggest starting with JavaScript. On the other hand, Python's easy syntax and readability make it an excellent entry point for those interested in general-purpose programming and data science.

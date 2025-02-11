@@ -1,0 +1,1 @@
+Python and JavaScript both have their strengths and prized roles within the programming ecosystem. The choice really hinges on the tasks you want to accomplish.
