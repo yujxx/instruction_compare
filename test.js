@@ -119,8 +119,8 @@ class AudioLoader {
         if (nextIndex < audioFiles.length) {
             try {
                 await Promise.all([
-                    this.preloadAudio(audioFiles[nextIndex]),
-                    this.preloadAudio(audioFilesN[nextIndex])
+                    this.preloadAudio(audioFilesN[nextIndex]),
+                    this.preloadAudio(audioFiles[nextIndex])
                 ]);
             } catch (error) {
                 console.warn('Failed to preload next audio:', error);
@@ -176,8 +176,8 @@ async function loadItem() {
         
         try {
             const [audio1, audio2] = await Promise.all([
-                audioLoader.preloadAudio(audioFiles[currentIndex]),
-                audioLoader.preloadAudio(audioFilesN[currentIndex])
+                audioLoader.preloadAudio(audioFilesN[currentIndex]),
+                audioLoader.preloadAudio(audioFiles[currentIndex])
             ]);
             
             audioPlayer1.src = audio1.src;
