@@ -90,6 +90,31 @@
             text-align: center;
             padding: 20px;
         }
+        .email-section {
+            margin-top: 20px;
+            text-align: center;
+        }
+    
+        .email-note {
+            margin-top: 15px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            border: 1px dashed #ccc;
+        }
+    
+        .note-text, .note-text-en {
+            margin: 5px 0;
+            color: #666;
+            font-size: 0.9em;
+        }
+    
+        .email-address {
+            margin: 10px 0;
+            font-weight: bold;
+            color: #2563eb;
+            font-size: 1.1em;
+        }
         .spinner {
             width: 40px;
             height: 40px;
@@ -113,7 +138,9 @@
             <p>In this test, you will evaluate 60 pairs of audio files. For each pair:</p>
             <ol>
                 <li>Listen to both audio files</li>
-                <li>Read the corresponding text</li>
+                <li>The corresponding text will be given</li>
+                <li>Please focus on the naturalness, expressiveness, emotion of the audio. </li>
+                <li>Please ignore other issues like noise or spelling error. </li>
                 <li>Rate the second audio compared to the first one on a scale from -3 to +3:
                     <ul>
                         <li>-3: Much worse</li>
@@ -123,6 +150,27 @@
                         <li>+1: Slightly better</li>
                         <li>+2: Better</li>
                         <li>+3: Much better</li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+        <div class="text-content-chinese">
+            <h2>测试说明:</h2>
+            <p>在这个测试中，你需要评估60对音频，对于每一对音频：</p>
+            <ol>
+                <li>认真听两个音频的内容</li>
+                <li>对应的文本会给出</li>
+                <li>主要关注语音的自然度，表现力，情绪风格等 </li>
+                <li>其他如噪音或拼读错误等问题可以忽略</li>
+                <li>以左边音频作为基准，对第二个音频进行打分:
+                    <ul>
+                        <li>-3: 差很多</li>
+                        <li>-2: 差一些</li>
+                        <li>-1: 差一点点</li>
+                        <li>0: 差不多</li>
+                        <li>+1: 好一点点</li>
+                        <li>+2: 好一些</li>
+                        <li>+3: 好很多</li>
                     </ul>
                 </li>
             </ol>
@@ -166,7 +214,14 @@
             <p>Detailed Scores:</p>
             <pre id="detailed-scores"></pre>
         </div>
-        <button class="button" onclick="sendResultsByEmail()">Send Results by Email</button>
+        <div class="email-section">
+            <button class="button" onclick="sendResultsByEmail()">Send Results by Email</button>
+            <div class="email-note">
+                <p class="note-text">如果无法自动跳转发送邮件，请截图结果页面发送至：</p>
+                <p class="email-address">yujiaxiao@link.cuhk.edu.hk</p>
+                <p class="note-text-en">If email client doesn't open automatically, please take a screenshot and send to the email address above.</p>
+            </div>
+        </div>
     </div>
 
     <script src="test.js"></script>
